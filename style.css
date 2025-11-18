@@ -13,6 +13,7 @@ body {
 :root {
   /* Background Colors */
   --bg-primary-color: #101010;
+  --bg-fill-color: #83baae;
 
   /* Text Colors */
   --text-primary-color: #d4d1d1;
@@ -53,6 +54,10 @@ section {
 
 section {
   padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: var(--space-lg);
 }
 
 section .infos {
@@ -67,7 +72,20 @@ section .infos {
   border-radius: var(--border-radius-sm);
 }
 
+.board {
+  border: 1px solid var(--border-primary-color);
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+}
 
-.board{
-    
+.block {
+  /* width: 30px;
+  height: 30px; */
+  border: 1px solid var(--border-primary-color);
+}
+
+.fill {
+  background-color: var(--bg-fill-color);
 }
